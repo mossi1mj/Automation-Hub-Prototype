@@ -57,3 +57,26 @@ export const data = [
     profile: Myron,
   },
 ];
+
+export const metrics = [
+  {
+    index: 0,
+    title: "Time Reduced",
+    metric: 68,
+  },
+  {
+    index: 1,
+    title: "Cost Saved",
+    metric: 50,
+  },
+  {
+    index: 2,
+    title: "Total Automations",
+    metric: 124,
+  },
+  {
+    index: 3,
+    title: "Tools Recorded",
+    metric: 17,
+  },
+];

@@ -1,38 +1,35 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { data } from "../test/TestData";
 import AutomationCard from "../components/AutomationCard";
-import { Grid, Stack, Chip } from "@mui/material";
+import { Grid, Stack, Chip, Paper } from "@mui/material";
 
 const Explore = () => {
   return (
-    <Grid
-      container
-      direction="row"
-      justifyContent="flex-start"
-      alignItems="flex-start"
-    >
+    <Fragment>
       {data.map((item) => (
-        <AutomationCard
-          key={item.index}
-          image={item.image}
-          title={item.title}
-          description={item.description}
-          labels={item.labels.map((item) => (
-            <Stack key={item.key} direction="row" spacing={2}>
-              <Chip
-                label={item.label}
-                style={{ backgroundColor: item.color }}
-              />
-            </Stack>
-          ))}
-          score={item.score}
-          name={item.name}
-          role={item.role}
-          occupation={item.occupation}
-          profile={item.profile}
-        />
+        <Grid container padding={1}>
+          <AutomationCard
+            key={item.index}
+            image={item.image}
+            title={item.title}
+            description={item.description}
+            labels={item.labels.map((item) => (
+              <Stack key={item.key} direction="row" spacing={2}>
+                <Chip
+                  label={item.label}
+                  style={{ backgroundColor: item.color }}
+                />
+              </Stack>
+            ))}
+            score={item.score}
+            name={item.name}
+            role={item.role}
+            occupation={item.occupation}
+            profile={item.profile}
+          />
+        </Grid>
       ))}
-    </Grid>
+    </Fragment>
   );
 };
 

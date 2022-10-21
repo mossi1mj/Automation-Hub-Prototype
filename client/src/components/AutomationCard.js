@@ -22,7 +22,7 @@ const AutomationCard = ({
   profile,
 }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card elevation={10} sx={{ maxWidth: 350 }}>
       <CardHeader
         avatar={
           <Avatar alt="Python" src={image} sx={{ width: 56, height: 56 }} />
@@ -36,7 +36,7 @@ const AutomationCard = ({
       <CardContent>
         <Typography variant="subtitle1">Description:</Typography>
         <Paper
-          variant="outlined"
+          elevation={5}
           style={{
             borderLeft: "5px solid purple",
             borderColor: "purple",
