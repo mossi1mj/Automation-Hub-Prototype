@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import { AppBar, Toolbar, Typography, Button, Fab } from "@mui/material";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
+import ThemeSwitch from "./ThemeSwitch";
 
 const NavigationBar = () => {
   const menuOptions = [
@@ -37,6 +36,10 @@ const NavigationBar = () => {
             {option.text}
           </Button>
         ))}
+        <Fab color="secondary" aria-label="add">
+          <SmartToyIcon />
+        </Fab>
+        <ThemeSwitch />
       </Toolbar>
     </AppBar>
   );

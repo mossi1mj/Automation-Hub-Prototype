@@ -15,7 +15,12 @@ import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
 const Carousel = () => {
   const navigate = useNavigate();
-  const [index, setIndex] = useState(0);
+
+  const randomNumber = (max) => {
+    return Math.floor(Math.random() * max);
+  };
+
+  const [index, setIndex] = useState(randomNumber(data.length));
 
   return (
     <Fragment>

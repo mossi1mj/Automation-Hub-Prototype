@@ -29,7 +29,7 @@ const AutomationCard = ({
           <Avatar alt="Python" src={image} sx={{ width: 56, height: 56 }} />
         }
         title={
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" align="left" gutterBottom>
             {title}
           </Typography>
         }
@@ -41,10 +41,11 @@ const AutomationCard = ({
           style={{
             borderLeft: "5px solid purple",
             borderColor: "purple",
+            borderRadius: 7,
           }}
         >
           <Box p={1}>
-            <Typography varient="body1" gutterBottom>
+            <Typography varient="body1" align="left" gutterBottom>
               {description}
             </Typography>
           </Box>
@@ -75,6 +76,7 @@ const AutomationCard = ({
             variant="body2"
             align="right"
             paddingRight={1}
+            color="text.secondary"
             gutterBottom
           >
             {role} -

@@ -4,23 +4,17 @@ import { metrics } from "../test/TestData";
 
 const AutomationMetrics = () => {
   return (
-    <Fragment elevation={10}>
-      <Paper>
+    <Fragment>
+      <Paper elevation={10}>
         <Grid
           container
           direction="row"
+          spacing={1}
           justifyContent="center"
           alignItems="center"
-          spacing={1}
         >
           {metrics.map((metric) => (
-            <Paper
-              key={metric.index}
-              elevation={5}
-              spacing={2}
-              justifyContent="center"
-              alignItems="center"
-            >
+            <Paper key={metric.index} elevation={5} spacing={2}>
               <Box p={1} justifyContent="center" alignItems="center">
                 <Typography variant="h3" gutterBottom>
                   {metric.metric}

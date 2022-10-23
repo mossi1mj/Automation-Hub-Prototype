@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import Carousel from "../components/Carousel";
-import { Paper, Grid } from "@mui/material";
+import { Paper, Grid, Box } from "@mui/material";
 import AutomationMetrics from "../components/AutomationMetrics";
+import Automation from "../test/images/AutomationTask.gif";
 
 const Home = () => {
   return (
@@ -14,7 +15,17 @@ const Home = () => {
       >
         <Grid item xs={12} sm={12} md={4}>
           <Paper>Test Item 1</Paper>
-          <Paper>Test Item 1</Paper>
+          <Box
+            component="img"
+            sx={{
+              height: 233,
+              width: 550,
+              maxHeight: { xs: 400, md: 400 },
+              maxWidth: { xs: 350, md: 350 },
+            }}
+            alt="The house from the offer."
+            src={Automation}
+          />
         </Grid>
 
         <Grid item xs={12} sm={12} md={6}>
