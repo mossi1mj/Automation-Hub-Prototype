@@ -8,6 +8,7 @@ import {
   Paper,
   CardActions,
   Box,
+  Divider,
 } from "@mui/material";
 
 const AutomationCard = ({
@@ -22,7 +23,7 @@ const AutomationCard = ({
   profile,
 }) => {
   return (
-    <Card elevation={10} sx={{ maxWidth: 350 }}>
+    <Card elevation={10} sx={{ maxWidth: 350, borderRadius: 10 }}>
       <CardHeader
         avatar={
           <Avatar alt="Python" src={image} sx={{ width: 56, height: 56 }} />
@@ -33,8 +34,8 @@ const AutomationCard = ({
           </Typography>
         }
       />
+      <Divider variant="inset" />
       <CardContent>
-        <Typography variant="subtitle1">Description:</Typography>
         <Paper
           elevation={5}
           style={{
@@ -62,12 +63,7 @@ const AutomationCard = ({
           </Typography>
         }
         action={
-          <Avatar
-            variant="square"
-            alt="Python"
-            src={profile}
-            sx={{ width: 80, height: 80 }}
-          />
+          <Avatar alt="Profile" src={profile} sx={{ width: 80, height: 80 }} />
         }
         title={
           <Typography variant="h6" align="right" paddingRight={1} gutterBottom>

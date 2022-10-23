@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Grid,
   Chip,
@@ -6,12 +7,14 @@ import {
   IconButton,
   MobileStepper,
   Typography,
+  ButtonBase,
 } from "@mui/material";
 import { data } from "../test/TestData";
 import AutomationCard from "./AutomationCard";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
 const Carousel = () => {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
 
   return (
@@ -35,24 +38,26 @@ const Carousel = () => {
             <KeyboardArrowLeft />
           </IconButton>
 
-          <AutomationCard
-            image={data[index].image}
-            title={data[index].title}
-            description={data[index].description}
-            labels={data[index].labels.map((item) => (
-              <Stack key={item.key} direction="row" spacing={2}>
-                <Chip
-                  label={item.label}
-                  style={{ backgroundColor: item.color }}
-                />
-              </Stack>
-            ))}
-            score={data[index].score}
-            name={data[index].name}
-            role={data[index].role}
-            occupation={data[index].occupation}
-            profile={data[index].profile}
-          />
+          <ButtonBase onClick={() => navigate("/explore")}>
+            <AutomationCard
+              image={data[index].image}
+              title={data[index].title}
+              description={data[index].description}
+              labels={data[index].labels.map((item) => (
+                <Stack key={item.key} direction="row" spacing={2}>
+                  <Chip
+                    label={item.label}
+                    style={{ backgroundColor: item.color }}
+                  />
+                </Stack>
+              ))}
+              score={data[index].score}
+              name={data[index].name}
+              role={data[index].role}
+              occupation={data[index].occupation}
+              profile={data[index].profile}
+            />
+          </ButtonBase>
 
           <IconButton
             onClick={() => {
